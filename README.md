@@ -62,3 +62,10 @@ The project uses **MySQL** for storing student, complaint and notice data.
 ## 👩‍💻 Developer
 
 **Gayatri Chavan**
+## 📸 Project Screenshots
+
+### Homepage
+![Homepage](./Screenshot%202026-08-10%20101730.png)
+
+### Student Registration
+![Student Registration](./127.0.0.1_5000_student_registration%20%281%29.png)
