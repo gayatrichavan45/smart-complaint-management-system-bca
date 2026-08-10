@@ -74,3 +74,6 @@ The project uses **MySQL** for storing student, complaint and notice data.
 ![Student Login](./Screenshot%202026-08-10%20103717.png)
 ### Student Dashboard
 ![Student Dashboard](./Screenshot%202026-08-10%20212934.png)
+
+### Admin Login
+![Admin Login](./Screenshot%202026-08-10%20213825.png)
