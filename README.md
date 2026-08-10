@@ -69,3 +69,6 @@ The project uses **MySQL** for storing student, complaint and notice data.
 
 ### Student Registration
 ![Student Registration](./127.0.0.1_5000_student_registration%20%281%29.png)
+
+### Student Login
+![Student Login](./Screenshot%202026-08-10%20103717.png)
