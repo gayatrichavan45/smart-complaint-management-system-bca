@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00c6fb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+}
+
+.container{
+    width:700px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:8px;
+}
+
+p{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    color:#334155;
+    margin-bottom:8px;
+}
+
+input,
+select{
+    width:100%;
+    padding:13px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.25);
+}
+
+.gender{
+    display:flex;
+    gap:25px;
+    margin-bottom:20px;
+}
+
+.gender label{
+    font-weight:normal;
+}
+
+.gender input{
+    width:auto;
+    margin-right:5px;
+}
+
+.btn-group{
+    display:flex;
+    gap:15px;
+}
+
+.submit-btn{
+    flex:1;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#1d4ed8;
+}
+
+.reset-btn{
+    flex:1;
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.reset-btn:hover{
+    background:#dc2626;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎓 Student Registration</h1>
+
+<p>Smart Complaint Management System</p>
+
+<form action="/student_registration" method="POST">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter Full Name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" placeholder="Enter Email Address" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" placeholder="Enter Mobile Number" required>
+
+<label>Gender</label>
+
+<div class="gender">
+
+<label><input type="radio" name="gender" value="Male" required> Male</label>
+
+<label><input type="radio" name="gender" value="Female"> Female</label>
+
+<label><input type="radio" name="gender" value="Other"> Other</label>
+
+</div>
+
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
+
+<label>Department</label>
+<select name="department" required>
+    <option value="">Select Department</option>
+    <option>School of Computational Science</option>
+    <option>School of Commerce and Management</option>
+    <option>School of Social Science</option>
+    <option>School of Life Science</option>
+    <option>School of Physical Science</option>
+    <option>School of Chemical Sciences</option>
+    <option>School of Mathematical Sciences</option>
+    <option>School of Earth Sciences</option>
+    <option>School of Pharmacy</option>
+</select>
+
+<label>Course</label>
+<select name="course" required>
+    <option value="">Select Course</option>
+    <option>BCA</option>
+    <option>BBA</option>
+    <option>BSc AI/IOT</option>
+    <option>MCA</option>
+    <option>MBA</option>
+    <option>MCom</option>
+    <option>MSc</option>
+    <option>B.Sc. Life Sciences</option>
+    <option>B.Sc. Microbiology</option>
+    <option>B.Pharm</option>
+    <option>Bachelor of Social Work</option>
+    <option>M.Sc. Mathematics</option>
+    <option>M.Ed</option>
+</select>
+
+<label>Year</label>
+<select name="year" required>
+    <option value="">Select Year</option>
+    <option>First Year</option>
+    <option>Second Year</option>
+    <option>Third Year</option>
+    <option>Fourth Year</option>
+</select>
+
+<label>Hostel Block</label>
+<input type="text" name="block" placeholder="Enter Hostel Block" required>
+
+<label>Room Number</label>
+<input type="text" name="room" placeholder="Enter Room Number" required>
+
+<label>Password</label>
+<input type="password" name="password" placeholder="Create Password" required>
+
+<label>Confirm Password</label>
+<input type="password" name="confirm_password" placeholder="Confirm Password" required>
+
+<div class="btn-group">
+    <input type="submit" value="Register" class="submit-btn">
+    <input type="reset" value="Clear" class="reset-btn">
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

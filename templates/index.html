@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Complaint Management System</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#e8eef7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:700px;
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+h3{
+    color:#64748b;
+    margin-bottom:20px;
+}
+
+.hostel-img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.welcome{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.welcome h2{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.welcome p{
+    color:#555;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.student{
+    background:#16a34a;
+}
+
+.student:hover{
+    background:#15803d;
+}
+
+.login{
+    background:#2563eb;
+}
+
+.login:hover{
+    background:#1d4ed8;
+}
+
+.admin{
+    background:#dc2626;
+}
+
+.admin:hover{
+    background:#b91c1c;
+}
+
+.footer{
+    margin-top:30px;
+    color:#666;
+    font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🏢 Smart Complaint Management System</h1>
+
+<h3>Hostel Complaint Management Portal</h3>
+
+<img src="{{ url_for('static', filename='images/hostel.jpg') }}"
+class="hostel-img"
+alt="Hostel">
+
+<div class="welcome">
+<h2>Welcome</h2>
+<p>
+Welcome to the Smart Complaint Management System.
+Register, Login and Track your hostel complaints online quickly and efficiently.
+</p>
+</div>
+
+<a href="/student_registration">
+<button class="student">
+📝 Student Registration
+</button>
+</a>
+
+<a href="/student_login">
+<button class="login">
+🔐 Student Login
+</button>
+</a>
+
+<a href="/admin_login">
+<button class="admin">
+👨‍💼 Admin Login
+</button>
+</a>
+
+<div class="footer">
+<hr><br>
+© 2026 Smart Complaint Management System
+</div>
+
+</div>
+
+</body>
+</html>

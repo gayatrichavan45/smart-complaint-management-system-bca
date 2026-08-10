@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Details</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:30px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:25px;
+}
+
+.details p{
+    font-size:18px;
+    margin:15px 0;
+}
+
+.details strong{
+    color:#0d47a1;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    margin-right:10px;
+    padding:12px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.back:hover{
+    background:#1d4ed8;
+}
+
+.complete{
+    background:green;
+}
+
+.complete:hover{
+    background:darkgreen;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>📋 Complaint Details</h1>
+
+<div class="details">
+
+<p><strong>Complaint ID:</strong> {{ complaint.id }}</p>
+
+<p><strong>Name:</strong> {{ complaint.name }}</p>
+
+<p><strong>🏢 Hostel Number:</strong> {{ complaint.hostel_number }}</p>
+
+<p><strong>Room:</strong> {{ complaint.room }}</p>
+
+<p><strong>Category:</strong> {{ complaint.category }}</p>
+
+<p><strong>Subject:</strong> {{ complaint.subject }}</p>
+
+<p><strong>Description:</strong> {{ complaint.description }}</p>
+
+<p><strong>Status:</strong> {{ complaint.status }}</p>
+
+<p><strong>Complaint Date:</strong> {{ complaint.complaint_date }}</p>
+
+</div>
+
+{% if session.get("admin_id") %}<a href="{{ url_for('complete_complaint', id=complaint.id) }}" class="back complete">
+    ✅ Mark as Completed
+</a>
+
+
+
+
+<a href="{{ url_for('admin_dashboard') }}" class="back">
+    ← Back to Admin Dashboard
+</a>
+
+{% else %}
+
+<a href="{{ url_for('student_dashboard') }}" class="back">
+    ← Back to Student Dashboard
+</a>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

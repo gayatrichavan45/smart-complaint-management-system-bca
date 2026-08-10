@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    width:700px;
+    margin:50px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h2{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+td:first-child{
+    font-weight:bold;
+    width:220px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 20px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.edit-btn{
+    background:#16a34a;
+    margin-left:10px;
+}
+
+.edit-btn:hover{
+    background:#15803d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>👤 Student Profile</h2>
+
+<table>
+
+<tr>
+<td>Full Name</td>
+<td>{{ student.fullname }}</td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td>{{ student.email }}</td>
+</tr>
+
+<tr>
+<td>Phone</td>
+<td>{{ student.phone }}</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>{{ student.gender }}</td>
+</tr>
+
+<tr>
+<td>Date of Birth</td>
+<td>{{ student.dob }}</td>
+</tr>
+
+<tr>
+<td>Department</td>
+<td>{{ student.department }}</td>
+</tr>
+
+<tr>
+<td>Course</td>
+<td>{{ student.course }}</td>
+</tr>
+
+<tr>
+<td>Year</td>
+<td>{{ student.year }}</td>
+</tr>
+
+<tr>
+<td>Block</td>
+<td>{{ student.block }}</td>
+</tr>
+
+<tr>
+<td>Room</td>
+<td>{{ student.room }}</td>
+</tr>
+
+</table>
+
+<a href="/student_dashboard" class="btn">
+⬅ Back to Dashboard
+</a>
+
+<a href="/edit_profile" class="btn edit-btn">
+✏ Edit Profile
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

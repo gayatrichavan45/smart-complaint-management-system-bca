@@ -1,0 +1,2 @@
+ALTER TABLE admin
+ADD COLUMN last_login DATETIME;
