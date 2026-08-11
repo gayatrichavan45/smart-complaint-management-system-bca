@@ -167,24 +167,79 @@ select:focus{
     <option>School of Earth Sciences</option>
     <option>School of Pharmacy</option>
 </select>
-
 <label>Course</label>
-<select name="course" required>
+<select name="course" id="course" required>
     <option value="">Select Course</option>
-    <option>BCA</option>
-    <option>BBA</option>
-    <option>BSc AI/IOT</option>
-    <option>MCA</option>
-    <option>MBA</option>
-    <option>MCom</option>
-    <option>MSc</option>
-    <option>B.Sc. Life Sciences</option>
-    <option>B.Sc. Microbiology</option>
-    <option>B.Pharm</option>
-    <option>Bachelor of Social Work</option>
-    <option>M.Sc. Mathematics</option>
-    <option>M.Ed</option>
 </select>
+
+<script>
+const courses = {
+    "School of Computational Science": [
+        "BCA",
+        "BSc AI/IOT",
+        "MCA"
+    ],
+
+    "School of Commerce and Management": [
+        "BBA",
+        "MBA",
+        "MCom"
+    ],
+
+    "School of Social Science": [
+        "Bachelor of Social Work"
+    ],
+
+    "School of Life Science": [
+        "B.Sc. Life Sciences",
+        "B.Sc. Microbiology"
+    ],
+
+    "School of Physical Science": [
+        "MSc"
+    ],
+
+    "School of Chemical Sciences": [
+        "MSc"
+    ],
+
+    "School of Mathematical Sciences": [
+        "M.Sc. Mathematics"
+    ],
+
+    "School of Earth Sciences": [
+        "M.Ed"
+    ],
+
+    "School of Pharmacy": [
+        "B.Pharm"
+    ]
+};
+
+const department = document.querySelector('select[name="department"]');
+const course = document.getElementById("course");
+
+department.addEventListener("change", function () {
+
+    const selectedDepartment = this.value;
+
+    course.innerHTML = '<option value="">Select Course</option>';
+
+    if (courses[selectedDepartment]) {
+
+        courses[selectedDepartment].forEach(function(courseName) {
+
+            const option = document.createElement("option");
+
+            option.value = courseName;
+            option.textContent = courseName;
+
+            course.appendChild(option);
+        });
+    }
+});
+</script>
+
 
 <label>Year</label>
 <select name="year" required>
@@ -194,9 +249,8 @@ select:focus{
     <option>Third Year</option>
     <option>Fourth Year</option>
 </select>
-
-<label>Hostel Block</label>
-<input type="text" name="block" placeholder="Enter Hostel Block" required>
+<label>Hostel Number</label>
+<input type="text" name="hostel_number" placeholder="Enter Hostel Number" required>
 
 <label>Room Number</label>
 <input type="text" name="room" placeholder="Enter Room Number" required>

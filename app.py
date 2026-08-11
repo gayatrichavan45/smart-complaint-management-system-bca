@@ -29,9 +29,9 @@ def student_registration():
         department = request.form["department"]
         course = request.form["course"]
         year = request.form["year"]
-        block = request.form["block"]
+       
         room = request.form["room"]
-        hostel_number = request.form["hostel_number"]
+        
         password = request.form["password"]
         confirm_password = request.form["confirm_password"]
         # Check if passwords match
@@ -46,9 +46,10 @@ def student_registration():
         cursor = conn.cursor()
         sql = """
         INSERT INTO students
-       (fullname, email, phone, gender, dob, department, course, year, block, room, hostel_number, password)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-        """
+       (fullname, email, phone, gender, dob, department, course, year, room, hostel_number, password)
+       VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+       """
+       
 
         
 
@@ -61,7 +62,7 @@ def student_registration():
             department,
             course,
             year,
-            block,
+           
             room,
             hostel_number,
             password
